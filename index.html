@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cestas Plásticas 40 kg SE VENDE</title>
+</head>
+<body class="red">
+    <div class="item-container">
+        <div class="img-container">
+            <img src="./images/amarilla.jpg" alt="Product image">
+            <img src="./images/negra.jpg" alt="Product image">
+            <img src="./images/verde.jpg" alt="Product image">
+            <img src="./images/roja.jpg" alt="Product image">
+        </div>
+
+        <div class="info">
+            <div class="colors">
+                <button id="yellow"></button>
+                <button id="blue"></button>
+                <button id="green"></button>
+                <button id="red"></button>
+            </div>
+            <p class="name">Cestas Plásticas</p>
+            <p class="description">Capacidad: 40kg. Peso Promedio: 2,24kg. Dimensiones: Ancho: 40cm. Largo: 60cm. Aplicación: Verduras-Otros.</p>
+            <div class="cart">
+                <p class="price">8 $</p>
+                <button class="action">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const colorButtons = document.querySelectorAll('.colors button');
+        colorButtons.forEach(item => {
+            item.addEventListener('click', function() {
+                const colorSelectedId = this.id;
+                document.body.className = colorSelectedId;
+            })
+        })
+
+    </script>
+    
+</body>
+</html>
